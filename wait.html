@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Please wait...</title>
+    <link href="/res/ssi.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function setURL() {
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('load')) {
+                var lnkClick = document.getElementById('lnkClick');
+                lnkClick.href = urlParams.get("load");
+                window.location = urlParams.get("load");
+            }
+        }
+    </script>
+</head>
+<body style="background-color: whitesmoke" onload="setURL();">
+    <div style="margin: auto; text-align: center; font-size: 24pt; margin-top: 10%; font-weight: bold; color: #909090;
+        text-shadow: 4px 4px 4px #c0c0c0; -moz-text-shadow: 4px 4px 4px #c0c0c0; -webkit-text-shadow: 4px 4px 4px #c0c0c0;
+        /*opacity: 0.6; filter:alpha(opacity=60);*/">
+        Please Wait...
+    </div>
+    <a href="" id="lnkClick">
+        <img src="/images/spinner.gif" style="position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%); " />
+    </a>
+</body>
+</html>
